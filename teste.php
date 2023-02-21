@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,13 @@
 </head>
 <body>
     <?php
-        $nome = "Raimundo joao";
-        $escola= "itc";
-        echo "$nome estuda no $escola";
+        $nome = $_GET['nome'];
+        $idade =$_GET['idade'];
+        $n1 =$_GET['a'];
+        $n2 =$_GET['b'];
+        echo "nome do estudante: $nome ||idade do estudante: $idade ||nota1:$n1 ||nota2: $n2 media final: ",($n1+$n2)/2;
+
+
     ?>
 </body>
 </html>
