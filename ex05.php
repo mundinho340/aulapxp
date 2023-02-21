@@ -8,10 +8,10 @@
 </head>
 <body>
     <?php
-        $n = 12;
-        $no ='Raimundo';
-
-        echo $no ,' ',$n;
-    ?>
+        $n1 =12;
+        $n2 =5;
+        $soma =$n1+$n2;
+    echo "a soma de $n1 + $n2 é igual a $soma";
+?>
 </body>
 </html>
