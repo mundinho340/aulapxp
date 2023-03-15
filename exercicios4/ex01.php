@@ -19,10 +19,21 @@
         }
         else if($b> $c&& $c>$a){
             $menor=$a;
-        }else if($b>$a>$c){
+        }else if($b>$a && $a>$c){
             $menor =$c;
-        }else if($)
+        }else if($c >$a && $a>$b){
+            $menor =$b;
+        }else if ($c >$b && $b>$a){
+            $menor=$a;
+        }
+
+        return $menor;
     }
+    $ol= menor(8,3,2);
+    echo $ol;
+
+
+
 
     ?>
 </body>
