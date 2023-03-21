@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-        $nome = $_GET['nome'];
-        $idade =$_GET['idade'];
-        $n1 =$_GET['a'];
-        $n2 =$_GET['b'];
-        echo "nome do estudante: $nome ||idade do estudante: $idade ||nota1:$n1 ||nota2: $n2 media final: ",($n1+$n2)/2;
+<?php
+    $preco=7.5;
+    $precoTotal=0;
+    $quantidade = $_GET["a"];
+    $iva;
 
+    if($quantidade < 100){
+        $iva = 0;
+        $precoTotal= $preco*$quantidade;
 
-    ?>
-</body>
-</html>
+    }else if($quantidade>100){
+        $iva = ($quantidade*$preco)*0.1;
+        $precoTotal = $iva+($preco*$quantidade);
+    }else if($quantidade>500){
+        $iva = ($quantidade*$preco)*0.16;
+        $precoTotal= $iva+($preco*$quantidade);
+    }
+
+    echo "A quantidade é $quantidade o preço a pagar é $precoTotal";
+?>
