@@ -10,12 +10,11 @@
     <?php
         $n1 = $_GET["a"];
         $n2 = $_GET["b"];
-
+        $result ;
         $media = ($n1+$n2)/2;
-
-        $result $media<7?"Reprovado":"Aprovado";
-        
-        echo $result;
+        $media>7? $result= "aprovado" : $result="reprovado";
+        echo "A media entre $n1 e $n2 é $media";
+        echo "O aluno esta ".(($media<6)?" Reprovado": "  Aprovado");
 
     ?>
 </body>
